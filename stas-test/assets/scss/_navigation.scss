@@ -73,7 +73,7 @@
         {
             background-color: $color-menu-links; 
             -webkit-mask-image: url('../img/SVG/home.svg'); 
-            mask-image: url('../img/svg/home.svg'); // after 3 years mask-image, without prefix, still does not work in chrome
+            mask-image: url('../img/SVG/home.svg'); // after 3 years mask-image, without prefix, still does not work in chrome
             @include support-settings;
         }
     }     
@@ -106,8 +106,8 @@
         @supports(-webkit-mask-image: url()) or (mask-image: url())
         {
             background-color: $color-menu-links; 
-            -webkit-mask-image: url('../img/svg/image.svg'); 
-            mask-image: url('../img/svg/image.svg'); // after 3 years mask-image, without prefix, still does not work in chrome
+            -webkit-mask-image: url('../img/SVG/image.svg'); 
+            mask-image: url('../img/SVG/image.svg'); // after 3 years mask-image, without prefix, still does not work in chrome
             @include support-settings;
         }
     }     
@@ -116,15 +116,15 @@
     {   
         @include icon-box-settings;
         // We can't change color of icon when we adding it this way. So just leave this for older browsers
-        background-image: url('../img/svg/envelop.svg');
+        background-image: url('../img/SVG/envelop.svg');
         opacity: 50%;
 
         // for newer browsers 
         @supports(-webkit-mask-image: url()) or (mask-image: url())
         {
             background-color: $color-menu-links;  
-            -webkit-mask-image: url('../img/svg/envelop.svg'); 
-            mask-image: url('../img/svg/envelop.svg'); // after 3 years mask-image, without prefix, still does not work in chrome
+            -webkit-mask-image: url('../img/SVG/envelop.svg'); 
+            mask-image: url('../img/SVG/envelop.svg'); // after 3 years mask-image, without prefix, still does not work in chrome
             @include support-settings;
         }
     } 
