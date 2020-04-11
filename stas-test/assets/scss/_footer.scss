@@ -9,8 +9,13 @@
     }  
     
     @media only screen and (min-width: $bp-desktop) {
+        padding: 6rem 14rem;
         display: flex;
-        flex-direction: row;
+        flex-direction: row;  
+    }
+
+    @media only screen and (min-width: $bp-large-desktop) {
+        padding: 6rem 32rem;
     }
 
     &__column-1 {

@@ -32,6 +32,28 @@ html {
     background-color: $color-secondary;
 }
 
+.container-world-news-page {
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 182rem;
+
+    display: flex;
+    flex-direction: column;
+    background-color: $color-secondary;
+}
+
+.container-world-news-page-top {
+    @media only screen and (min-width: $bp-tablet) {
+        padding: 0 8rem 3rem 8rem;
+    }  
+    display: flex;
+    flex-direction: column;
+}
+
+.container-world-news-page-bottom {
+    
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: $color-grey-dark-1;
     opacity: .5; /* Firefox */

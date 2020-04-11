@@ -430,6 +430,427 @@
     background-image: none;
 }
 
+.breadcrumbs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem;
+
+    @media only screen and (min-width: $bp-tablet) {
+        padding: 0;
+        margin-bottom: 2rem;
+    } 
+
+    @media only screen and (min-width: $bp-desktop) {
+        display: flex;
+        //margin: 18.5rem;
+        //margin-bottom: 4rem;
+    } 
+
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: $color-black;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &__settings-icon-wrapper {
+        padding: 1rem;
+        border-radius: $border-radius;
+        border: 2px solid $color-grey-light-1;
+    }
+
+    &__settings-icon {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-size: cover;
+
+        // We can't change color of icon when we adding it this way. So just leave this for older browsers
+        background-image: url('../img/SVG/equalizer.svg');
+        background-position: center;
+
+        @supports(-webkit-mask-image: url()) or (mask-image: url())
+        {
+            background-color: #575F66; 
+            -webkit-mask-image: url('../img/SVG/equalizer.svg'); 
+            mask-image: url('../img/SVG/equalizer.svg'); 
+            -webkit-mask-size: cover; 
+            mask-size: cover; 
+            background-image: none;
+        }
+    }
+}
+
+.back-btn {
+    @media only screen and (min-width: $bp-tablet) {
+        display: none;
+    }  
+
+    height: 2.6rem;
+    width: 2.6rem;
+    background-size: cover;
+    margin-right: 3rem;
+
+    // We can't change color of icon when we adding it this way. So just leave this for older browsers
+    background-image: url('../img/SVG/arrow-left.svg');
+
+    @supports(-webkit-mask-image: url()) or (mask-image: url())
+    {
+        background-color: $color-black; 
+        -webkit-mask-image: url('../img/SVG/arrow-left.svg'); 
+        mask-image: url('../img/SVG/arrow-left.svg'); 
+        -webkit-mask-size: cover; 
+        mask-size: cover; 
+        background-image: none;
+    }
+}
+
+.path-and-settings {
+
+    display: none;
+
+    @media only screen and (min-width: $bp-tablet) {
+        display: flex;
+    }  
+
+    &__path--page {
+        color: $color-grey-dark-2;
+    }
+
+    &__icon {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-size: cover;
+        margin-right: 3rem;
+
+        // We can't change color of icon when we adding it this way. So just leave this for older browsers
+        background-image: url('../img/SVG/home.svg');
+
+        @supports(-webkit-mask-image: url()) or (mask-image: url())
+        {
+            background-color: $color-black; 
+            -webkit-mask-image: url('../img/SVG/home.svg'); 
+            mask-image: url('../img/SVG/home.svg'); 
+            -webkit-mask-size: cover; 
+            mask-size: cover; 
+            background-image: none;
+        }
+    }
+}
+
+.search-news {
+    display: flex;
+    flex-direction: column;
+    
+    @media only screen and (min-width: $bp-tablet) {
+       border-radius: $border-radius;
+       overflow: hidden;
+    }  
+    @media only screen and (min-width: $bp-desktop) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.search-news-main {
+    color: $color-white;
+    padding: 9rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (min-width: $bp-desktop) {
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 15rem 11rem;
+    }
+
+    background-image: url('../img/yellow_mountain.jpg');
+    background-position: center;
+    background-size: cover;
+    &__title {
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__line {
+        margin-top: 3rem;
+        width: 4rem;
+        height: 0;
+        border: 2px solid $color-primary;
+    }
+
+    &__text {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        font-weight: bold;
+        text-align: center;
+        word-break: break-all;
+        max-width: 44rem;
+    }
+
+    &__author {
+        margin-top: 3rem;
+    }
+}
+
+.container-world-news-page-top {
+    color: $color-grey-dark-2;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    font-weight: 400;
+
+    @media only screen and (min-width: $bp-desktop) {
+        padding: 0 14rem 3rem 14rem;
+    }  
+
+    @media only screen and (min-width: $bp-large-desktop) {
+        padding: 0 32rem 4rem 32rem;
+    }
+}
+
+
+.three-columns-section {
+    border-top: 2px solid $color-grey-light-1;
+    padding-top: 3rem;
+    margin: 4rem 2.4rem;
+
+    @media only screen and (min-width: $bp-tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 4rem 0rem;
+    }  
+
+ 
+    &__col-1 {
+        @media only screen and (min-width: $bp-tablet) {
+            width: 56%;
+        }
+
+        @media only screen and (min-width: $bp-desktop) {
+            width: 30%;
+        }
+    }
+
+    &__col-2 {
+        @media only screen and (min-width: $bp-tablet) {
+            width: 45%;
+        }
+        @media only screen and (min-width: $bp-desktop) {
+            width: 30%;
+        }
+    }
+
+    &__col-3 {
+        margin-top: 2rem;
+
+        @media only screen and (min-width: $bp-tablet) {
+            margin-top: 0;
+            width: 45%;
+        }
+        @media only screen and (min-width: $bp-desktop) {
+            width: 30%;
+        }
+    }
+
+    &__col-3 > div:first-child {
+        margin-top: 1rem;
+    }
+}
+
+.image-and-two-text-block-section {
+    border-top: 2px solid $color-grey-light-1;
+    padding-top: 3rem;
+    margin: 0rem 2.4rem 3rem;
+
+    @media only screen and (min-width: $bp-tablet) {
+        margin: 0rem 0rem 3rem;
+    }
+
+    @media only screen and (min-width: $bp-desktop) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    &__col-1 {
+        background-image: url('../img/elephant.jpg');
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        min-height: 18rem;
+        padding-top: 55.04%; /* Aspect Ratio */
+
+        @media only screen and (min-width: $bp-tablet) {
+            min-height: 26rem;
+            padding-top: 42.76%; /* Aspect Ratio */
+        }
+
+        @media only screen and (min-width: $bp-desktop) {
+            width: 100%;
+        }
+
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
+
+    &__col-2 {
+        margin: 2.4rem 0;
+        @media only screen and (min-width: $bp-desktop) {
+            width: 70%;
+            padding-right: 3rem;
+        }
+    }  
+    
+    &__col-3 {
+        color: $color-black;
+        font-size: 1.6rem;
+        line-height: 3rem;
+        font-weight: 400;
+        font-style: oblique;
+
+        @media only screen and (min-width: $bp-desktop) {
+            width: 30%;
+            margin: 2.4rem 0;
+        }
+    }
+}
+
+.pagination {
+    border-top: 2px solid $color-grey-light-1;
+    padding-top: 3rem;
+    margin: 0rem 2.4rem 3rem; /* top | horizontal | bottom */
+
+    @media only screen and (min-width: $bp-tablet) {
+        margin: 0rem 0rem 3rem;
+    }
+
+    color: $color-grey-dark-2;
+    font-size: 1.1rem;
+    line-height: 2rem;
+
+    &__ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+    }
+
+    &__ul > li:not(:first-child) {
+        margin-left: 1rem;
+    }
+
+    &__li {
+        padding-bottom: 1rem;
+
+        &--more {
+            @include icon-box-settings;
+            background-image: url('../img/SVG/dots-three-horizontal.svg');
+            margin-top: 2px;
+    
+            @supports(-webkit-mask-image: url()) or (mask-image: url())
+            {
+                background-color: $color-black;
+                -webkit-mask-image: url('../img/SVG/dots-three-horizontal.svg'); 
+                mask-image: url('../img/SVG/dots-three-horizontal.svg'); 
+                @include support-settings;
+            }
+        }
+    }
+
+    &__li--active {
+        color: $color-black;
+        font-weight: bold;
+        border-bottom: 2px solid $color-primary;
+    }
+}
+
+h2 {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    color: $color-black;
+    font-family: "Acumin Pro"; 
+    font-weight: bold;
+    text-align: left;
+    padding: 1.4rem 0 4rem;
+}
+
+
+.input-box {
+    color: $color-black;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-family: "Acumin Pro"; 
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+    
+    &__field {
+        margin-bottom: 4rem;
+        border: 2px solid $color-grey-light-1;
+        border-radius: $border-radius;
+        width: 100%;
+        height: 4rem;
+        padding: 1.4rem;
+    }
+
+    &__icon {
+        height: 1.6rem;
+        width: 1.6rem;
+        border: 2px solid red;
+        background-size: cover;
+        margin-right: 3rem;
+        position: absolute;
+        z-index: 10;
+        right: -1rem;
+        top: 4rem;
+
+        &--down {
+            background-image: url('../img/SVG/chevron-thin-down.svg');
+
+            @supports(-webkit-mask-image: url()) or (mask-image: url())
+            {
+                background-color: $color-grey-dark-2; 
+                -webkit-mask-image: url('../img/SVG/chevron-thin-down.svg'); 
+                mask-image: url('../img/SVG/chevron-thin-down.svg'); 
+                -webkit-mask-size: cover; 
+                mask-size: cover; 
+                background-image: none;
+            }
+        }
+    }
+}
+
+.search-news-fields {
+    &__btn {
+        width: 15rem;
+        text-align: center;
+    }
+    background-color: $color-white;
+    padding: 4rem 2.4rem;
+
+    @media only screen and (min-width: $bp-tablet) {
+        padding: 8rem; 
+    }  
+
+    @media only screen and (min-width: $bp-desktop) {
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 12rem 11rem 14rem;
+    }
+    
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
 .stories-block {
     @media only screen and (min-width: $bp-tablet) {
         padding: 8rem;
