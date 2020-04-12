@@ -88,7 +88,7 @@
             content: "";
             position: absolute;
             left: 0;
-            transition: all .2s;
+            //transition: all .2s;
         }
 
         &::before {

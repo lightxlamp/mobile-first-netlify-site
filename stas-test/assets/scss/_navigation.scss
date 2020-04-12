@@ -134,6 +134,7 @@
     list-style: none;
     display: none; // mobile first 
     flex-wrap: wrap;
+    border: 5px solid red;
 
     &__side-bar {
         display: flex;
