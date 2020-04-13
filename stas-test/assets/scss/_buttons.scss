@@ -1,19 +1,18 @@
 .btn {
-    background-color: $color-primary;
-    color: white;
-    border-radius: $border-radius;
-    border: none;
-    font-family: $font-display;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    padding: 1.2rem 2.5rem;
-    cursor: pointer;
-    transition: all .2s;
-    align-self: flex-start;
-    font-weight: bold;
-    //filter: brightness(80%);
+  align-self: flex-start;
+  background-color: $color-primary;
+  border-radius: $border-radius;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: $font-display;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 1.2rem 2.5rem;
+  text-transform: uppercase;
+  transition: all 0.2s;
 
-    &:hover {
-        background-color: $color-primary; // тут эффект можно и поставить
-    }
+  &:hover {
+    background-color: $color-primary; // тут эффект можно и поставить
+  }
 }

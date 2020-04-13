@@ -1,14 +1,12 @@
 @import "base";
-//@import "typography";
-@import "variables";
 @import "buttons";
-@import "utils";
-
+@import "components";
+@import "email-box";
+@import "footer";
 @import "header";
 @import "logo";
-@import "components";
-@import "navigation";
 @import "navigation-arrows";
-@import "email-box";
+@import "navigation";
 @import "social-networks";
-@import "footer";
+@import "utils";
+@import "variables";

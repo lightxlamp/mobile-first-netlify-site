@@ -1,96 +1,155 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.2rem 2rem;
-    //border: 1px solid blue;
-    width: 100%;
-    align-items: center;
-    background-color: $color-secondary;
+  align-items: center;
+  background-color: $color-secondary;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  width: 100%;
 
-    &__logo {
-        text-transform: uppercase;
-        color: $color-grey-dark-2;
-        font-size: 1.3rem; 
-        line-height: 2.0rem;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-
-        @media only screen and (min-width: $bp-tablet) {
-            & {
-                color: $color-primary;
-            }
-        }
-    }
+  &__logo {
+    color: $color-grey-dark-2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 2rem;
+    text-transform: uppercase;
 
     @media only screen and (min-width: $bp-tablet) {
-        & > :nth-child(1) { // tricky error "&:nth-child(1)" without >. Broke order of my navigation
-            order: 2;
-        } 
-        
-        & > :nth-child(3) {
-            order: 2;
-        }
+      & {
+        color: $color-primary;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $bp-tablet) {
+    & > :nth-child(1) {
+      order: 2;
     }
 
-    @media only screen and (min-width: $bp-tablet) {
-        & > :nth-child(1) {
-            margin-left: auto; // to move footer-navigation to right side. To user avatar
-        } 
+    & > :nth-child(3) {
+      order: 2;
     }
+  }
+
+  @media only screen and (min-width: $bp-tablet) {
+    & > :nth-child(1) {
+      margin-left: auto; // to move footer-navigation to right side. To user avatar
+    }
+  }
 }
 
 .nav-btn {
-    border: none;
-    border-radius: 0;
+  background-color: $color-black;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  height: 1.2px;
+  width: 1rem;
+
+  @media only screen and (min-width: $bp-tablet) {
+    & {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: "";
     background-color: $color-black;
+    display: block;
     height: 1.2px;
-    width: 1rem; 
-    cursor: pointer;
+    width: 0.6rem;
+  }
 
-    @media only screen and (min-width: $bp-tablet) {
-        & {
-            display: none;
-        }
-    }
+  &::after {
+    content: "";
+    background-color: $color-black;
+    display: block;
+    height: 1.2px;
+    width: 1rem;
+  }
 
-    &::before {
-        content: "";
-        display: block;
-        background-color: $color-black;
-        height: 1.2px;
-        width: .6rem;
-    }   
-    
-    &::after {
-        content: "";
-        display: block;
-        background-color: $color-black;
-        height: 1.2px;
-        width: 1rem;
-    }
+  &::before {
+    transform: translateY(-0.45rem);
+  }
 
-    &::before {
-        transform: translateY(-.45rem);
-    }  
-    
-    &::after {
-        transform: translateY(-.9rem);
-    }
+  &::after {
+    transform: translateY(-0.9rem);
+  }
 }
 
 .logged-in-user {
-    &__photo{
-        //margin-right: 1rem;
-        // height: 1.6rem; // 3rem on desktop
-        // width: 1.6rem; // 3rem on desktop
-        width: 16px;
-        border-radius: 50%;
-
-        max-width:100%;
-        height:auto;
-
-        @media only screen and (min-width: $bp-tablet) {
-            width: 30px;
-        }
+  &__photo {
+    border-radius: 50%;
+    height: auto;
+    max-width: 100%;
+    width: 1.6rem;
+    @media only screen and (min-width: $bp-tablet) {
+      width: 30px;
     }
+  }
+}
+
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: $color-secondary;
+    cursor: pointer;
+    display: block;
+    @media only screen and (min-width: $bp-tablet) {
+      display: none;
+    }
+    height: 2rem;
+    width: 1.7rem;
+  }
+
+  // Functionality
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  // Icon
+  &__icon {
+    margin-top: 1rem;
+    position: relative;
+
+    & {
+      width: 1rem;
+    }
+
+    &,
+    &::before,
+    &::after {
+      background-color: $color-black;
+      display: inline-block;
+      height: 2px; // width of hamburger menu single line
+    }
+
+    &::before,
+    &::after {
+      // in order to appear on the page ::before and ::after need their "content" property be defined
+      //transition: all .2s;
+      content: "";
+      left: 0;
+      position: absolute;
+      width: 1.6rem;
+    }
+
+    &::before {
+      top: -0.6rem;
+      //The ::before pseudo-element can be used to insert some content before the content of an element.
+      //EG: inserting an image before the content of each <h1> element:
+    }
+
+    &::after {
+      top: 0.6rem;
+    }
+  }
 }

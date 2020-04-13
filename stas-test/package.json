@@ -9,6 +9,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "jest",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
@@ -19,12 +21,25 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "node-sass": "^4.13.1",
     "nuxt": "^2.12.1",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "v-click-outside": "^3.0.1"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-eslint": "^9.0.0",
     "babel-jest": "^24.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-wesbos": "0.0.19",
+    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "jest": "^24.1.0",
+    "prettier": "^1.19.1",
     "vue-jest": "^4.0.0-0"
   }
 }

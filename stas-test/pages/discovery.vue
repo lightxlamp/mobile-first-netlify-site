@@ -18,16 +18,21 @@
       </div>
       <div class="main-story__bottom-section">
         <div class="author">
-          <img src="../assets/img/boy.jpg" alt="Jonathan Walker" class="author__photo" />
+          <img
+            src="../assets/img/boy.jpg"
+            alt="Jonathan Walker"
+            class="author__photo"
+          />
           <div class="author__name">by Steven Voorhees</div>
         </div>
         <div class="next-story">
           <div class="next-story__left">
             <div class="next-story__next">Next Story</div>
             <div class="next-story__title">Morbi eleifend a libero</div>
-            <div
-              class="next-story__text"
-            >Quisque viverra interdum velit, et cursus magna sagittis in. In dui dui.</div>
+            <div class="next-story__text">
+              Quisque viverra interdum velit, et cursus magna sagittis in. In
+              dui dui.
+            </div>
           </div>
 
           <div class="next-story__right">
@@ -41,30 +46,41 @@
       <section class="text-only-stories">
         <div class="text-only-story">
           <div class="text-only-story__col-1-of-2">
-            <div class="text-only-story__title">Quisque viverra interdum velit?</div>
+            <div class="text-only-story__title">
+              Quisque viverra interdum velit?
+            </div>
             <div class="text-only-story__text">
-              Culpa qui officia deserunt mollit anim id esto polujimi laborum. Sed ut perspiciatis unde omnis iste
-              eropluk onatuspop error sit voluptartem accusantium wetrop doloremque laudantium, totam rem aperiam,
-              eaquep ipsa quaeer ab illo inventore veritatisy et quasi weth ropeior architecto beatae vitae dicta sunt
-              explicapbo. Nemo popul eniem ipsam yui voluptatem quialoperyi voluptas sit aspernatur aute odit aut fugit,
-              sed quiawi consequuntur joki erty magni dolores eosep quiklopii ratione wertyuil voluptatem sequi nesciunt.
-              Nequeop porro polu quisquam est, quepi dolorem ipsum quiat lopi dolor srit amet, consectetur adipisci
-              velit, topitop seid quia non numquam eiuris modij tempora poluko
+              Culpa qui officia deserunt mollit anim id esto polujimi laborum.
+              Sed ut perspiciatis unde omnis iste eropluk onatuspop error sit
+              voluptartem accusantium wetrop doloremque laudantium, totam rem
+              aperiam, eaquep ipsa quaeer ab illo inventore veritatisy et quasi
+              weth ropeior architecto beatae vitae dicta sunt explicapbo. Nemo
+              popul eniem ipsam yui voluptatem quialoperyi voluptas sit
+              aspernatur aute odit aut fugit, sed quiawi consequuntur joki erty
+              magni dolores eosep quiklopii ratione wertyuil voluptatem sequi
+              nesciunt. Nequeop porro polu quisquam est, quepi dolorem ipsum
+              quiat lopi dolor srit amet, consectetur adipisci velit, topitop
+              seid quia non numquam eiuris modij tempora poluko
             </div>
           </div>
 
           <div class="text-only-story__col-2-of-2">
             <div class="text-only-story__text">
-              incidunt ut labore et dolore magnam
-              aliquam mokeru quaerat iope voluptatem. Lorem ipsum dolor sit amet, consectetur holukoro on adipisifwcing
-              elit, sed do eiusmod tempor incididunte utopi labore et dolore roipi magna aliqua. Ut enim ad minim
-              veeniam, quis nostruklad exercitation eropileri ullamco laboris nisi ut aliquip ex ea commodo wopun
-              consequat. Duis aute irure dolor in reprehenderit inie tufpoy voluptate velit esse cillum dolore eu
-              fugiat holi nulla parieratur. Excepteur sint occaecat ropukuli uki cupidatat.
+              incidunt ut labore et dolore magnam aliquam mokeru quaerat iope
+              voluptatem. Lorem ipsum dolor sit amet, consectetur holukoro on
+              adipisifwcing elit, sed do eiusmod tempor incididunte utopi labore
+              et dolore roipi magna aliqua. Ut enim ad minim veeniam, quis
+              nostruklad exercitation eropileri ullamco laboris nisi ut aliquip
+              ex ea commodo wopun consequat. Duis aute irure dolor in
+              reprehenderit inie tufpoy voluptate velit esse cillum dolore eu
+              fugiat holi nulla parieratur. Excepteur sint occaecat ropukuli uki
+              cupidatat.
             </div>
             <div class="article__wrap">
               <div class="article__info">
-                <div class="article__title article__title--story">Thought Experiment- VR Travel App</div>
+                <div class="article__title article__title--story">
+                  Thought Experiment- VR Travel App
+                </div>
                 <div class="date-time-author">
                   <div class="date-time-author__icon"></div>
                   <div class="date-time-author__time">3h ago &nbsp;</div>
@@ -88,8 +104,10 @@
           </div>
 
           <div class="story__text">
-            In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan.
-            Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet, neque est rhoncus massa
+            In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla
+            faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa
+            vitae lobortis. Duis consequat, nunc a pretium imperdiet, neque est
+            rhoncus massa
           </div>
 
           <div class="date-time-author">
@@ -109,8 +127,9 @@
           </div>
 
           <div class="story__text">
-            In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan.
-            Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet.
+            In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla
+            faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa
+            vitae lobortis. Duis consequat, nunc a pretium imperdiet.
           </div>
 
           <div class="date-time-author">
@@ -135,7 +154,6 @@
     <Footer />
   </div>
 </template>
-
 
 <script>
 import ArticlesList from "~/components/ArticlesList";

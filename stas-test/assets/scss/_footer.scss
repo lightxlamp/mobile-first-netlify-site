@@ -1,53 +1,51 @@
 .footer {
-    background-color: $color-grey-dark-2;
-    padding: 6rem 8rem;
-    display: none;
+  background-color: $color-grey-dark-2;
+  display: none;
+  padding: 6rem 8rem;
 
-    @media only screen and (min-width: $bp-tablet) {
-        display: flex;
-        flex-direction: column;
-    }  
-    
+  @media only screen and (min-width: $bp-tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    display: flex;
+    flex-direction: row;
+    padding: 6rem 14rem;
+  }
+
+  @media only screen and (min-width: $bp-large-desktop) {
+    padding: 6rem 32rem;
+  }
+
+  &__column-1 {
+    display: flex;
+    flex: 1 1 auto;
+
+    & > div {
+      flex-basis: 0;
+      flex-grow: 1;
+      padding: 0 2.4rem 3.4rem 2.4rem;
+    }
+  }
+
+  &__column-2 {
+    align-items: flex-end;
     @media only screen and (min-width: $bp-desktop) {
-        padding: 6rem 14rem;
-        display: flex;
-        flex-direction: row;  
+      align-items: flex-start;
     }
+    display: flex;
+    flex: 1 1 auto;
 
-    @media only screen and (min-width: $bp-large-desktop) {
-        padding: 6rem 32rem;
+    & > div {
+      flex-basis: 0;
+      flex-grow: 1;
+      padding: 0 2.4rem 3.4rem 2.4rem;
     }
+  }
 
-    &__column-1 {
-        display: flex;
-        flex: 1 1 auto;
-
-        & > div {
-            flex-grow: 1;
-            flex-basis: 0; // nicu <3 // https://stackoverflow.com/questions/25066214/flexbox-not-giving-equal-width-to-elements
-            //border: 1px solid red;
-            padding: 0 2.4rem 3.4rem 2.4rem;
-        }
-    } 
-    
-    &__column-2 {
-        display: flex;
-        flex: 1 1 auto;
-        align-items: flex-end;
-
-        @media only screen and (min-width: $bp-desktop) {
-            align-items: flex-start;
-        }  
-
-        & > div {
-            flex-grow: 1;
-            flex-basis: 0;
-            padding: 0 2.4rem 3.4rem 2.4rem;
-        }
-    }
-
-    &__nav {
-        display: flex;
-        justify-content: flex-start;
-    }
+  &__nav {
+    display: flex;
+    justify-content: flex-start;
+  }
 }

@@ -5,13 +5,13 @@
       <div class="footer__nav">
         <ul class="nav nav--footer">
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--footer">Home</a>
+            <nuxt-link class="nav__link nav__link--footer" to="/">Home</nuxt-link>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--footer">Discovery</a>
+            <nuxt-link class="nav__link nav__link--footer" to="/discovery">Discovery</nuxt-link>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--footer">Photos</a>
+            <nuxt-link class="nav__link nav__link--footer" to="/world-news">Photos</nuxt-link>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link nav__link--footer">Contact</a>
@@ -51,13 +51,14 @@
     </div>
 
     <div class="footer__column-2">
-
       <div class="user-email-box">
         <div class="user-email-box__text-box">
           <input class="email-field" type="email" placeholder="Email" />
           <div class="user-email-box__icon-box"></div>
         </div>
-        <p class="user-email-box__text">Stay in touch with us for the freshest products!</p>
+        <p class="user-email-box__text">
+          Stay in touch with us for the freshest products!
+        </p>
       </div>
 
       <SocialNetworks />
