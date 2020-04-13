@@ -1,8 +1,7 @@
 .main-article {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/mountain.jpg");
   background-position: center; // lovely fix
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../img/mountain.jpg");
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -297,7 +296,6 @@
     &--happening-now {
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 50% 50%;
       background-size: cover;
       border-radius: $border-radius;
       min-height: 300px;
@@ -433,13 +431,13 @@
   }
 
   &__settings-icon {
-    background-size: cover;
     height: 1.6rem;
     width: 1.6rem;
 
     // We can't change color of icon when we adding it this way. So just leave this for older browsers
     background-image: url("../img/svg/equalizer.svg");
     background-position: center;
+    background-size: cover;
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
       -webkit-mask-image: url("../img/svg/equalizer.svg");
@@ -826,8 +824,7 @@ h2 {
 
 .main-story {
   // top, transparent black, faked with gradient - instead of filter: brightness
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
-    url(../img/parrot.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../img/parrot.jpg);
   background-size: cover;
   background-position: center;
   padding: 14rem 2.4rem 4rem;
