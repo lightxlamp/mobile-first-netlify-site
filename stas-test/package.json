@@ -17,6 +17,10 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
+  "comments": {
+    "dev: nuxt": "Launch a development server on localhost:3000 with hot-reloading.",
+    "nuxt start": "Start the server in production mode (after running nuxt build)."
+  },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
     "node-sass": "^4.13.1",
