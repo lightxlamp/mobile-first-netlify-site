@@ -24,15 +24,15 @@
   &__icon-box {
     @include icon-box-settings;
     // We can't change color of icon when we adding it this way. So just leave this for older browsers
-    background-image: url("../img/svg/location-arrow.svg");
+    background-image: url("~assets/svg/location-arrow.svg");
     margin: 0.8rem 0 0 -2.5rem;
 
     // for newer browsers
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/location-arrow.svg");
+      -webkit-mask-image: url("~assets/svg/location-arrow.svg");
       @include support-settings;
       background-color: $color-white;
-      mask-image: url("../img/svg/location-arrow.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
+      mask-image: url("~assets/svg/location-arrow.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
     }
   }
 }

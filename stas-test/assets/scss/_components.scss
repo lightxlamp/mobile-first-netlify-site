@@ -373,14 +373,14 @@
     width: 1.6rem;
 
     // We can't change color of icon when we adding it this way. So just leave this for older browsers
-    background-image: url("../img/svg/clock.svg");
+    background-image: url("~assets/svg/clock.svg");
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/clock.svg");
+      -webkit-mask-image: url("~assets/svg/clock.svg");
       -webkit-mask-size: cover;
       background-color: $color-grey-dark-1;
       background-image: none;
-      mask-image: url("../img/svg/clock.svg");
+      mask-image: url("~assets/svg/clock.svg");
       mask-size: cover;
     }
   }
@@ -435,16 +435,16 @@
     width: 1.6rem;
 
     // We can't change color of icon when we adding it this way. So just leave this for older browsers
-    background-image: url("../img/svg/equalizer.svg");
+    background-image: url("~assets/svg/equalizer.svg");
     background-position: center;
     background-size: cover;
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/equalizer.svg");
+      -webkit-mask-image: url("~assets/svg/equalizer.svg");
       -webkit-mask-size: cover;
       background-color: #575f66;
       background-image: none;
-      mask-image: url("../img/svg/equalizer.svg");
+      mask-image: url("~assets/svg/equalizer.svg");
       mask-size: cover;
     }
   }
@@ -490,14 +490,14 @@
     width: 1.6rem;
 
     // We can't change color of icon when we adding it this way. So just leave this for older browsers
-    background-image: url("../img/svg/home.svg");
+    background-image: url("~assets/svg/home.svg");
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/home.svg");
+      -webkit-mask-image: url("~assets/svg/home.svg");
       -webkit-mask-size: cover;
       background-color: $color-black;
       background-image: none;
-      mask-image: url("../img/svg/home.svg");
+      mask-image: url("~assets/svg/home.svg");
       mask-size: cover;
     }
   }
@@ -713,14 +713,14 @@
 
     &--more {
       @include icon-box-settings;
-      background-image: url("../img/svg/dots-three-horizontal.svg");
+      background-image: url("~assets/svg/dots-three-horizontal.svg");
       margin-top: 2px;
 
       @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-        -webkit-mask-image: url("../img/svg/dots-three-horizontal.svg");
+        -webkit-mask-image: url("~assets/svg/dots-three-horizontal.svg");
         @include support-settings;
         background-color: $color-black;
-        mask-image: url("../img/svg/dots-three-horizontal.svg");
+        mask-image: url("~assets/svg/dots-three-horizontal.svg");
       }
     }
   }
@@ -920,14 +920,14 @@ h2 {
 
   &__icon {
     @include icon-box-settings;
-    background-image: url("../img/svg/navigate_next.svg");
+    background-image: url("~assets/svg/navigate_next.svg");
     margin-top: 2px;
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/navigate_next.svg");
+      -webkit-mask-image: url("~assets/svg/navigate_next.svg");
       @include support-settings;
       background-color: $color-white;
-      mask-image: url("../img/svg/navigate_next.svg");
+      mask-image: url("~assets/svg/navigate_next.svg");
     }
   }
 
@@ -1008,14 +1008,14 @@ h2 {
   &__icon {
     @include icon-box-settings;
     // We can't change color of icon when we adding it this way. So just leave this for older browsers
-    background-image: url("../img/svg/earth.svg");
+    background-image: url("~assets/svg/earth.svg");
 
     // for newer browsers
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/earth.svg");
+      -webkit-mask-image: url("~assets/svg/earth.svg");
       @include support-settings;
       background-color: $color-white;
-      mask-image: url("../img/svg/earth.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
+      mask-image: url("~assets/svg/earth.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
     }
   }
 
@@ -1029,14 +1029,14 @@ h2 {
   &__icon {
     @include icon-box-settings;
     // We can't change color of icon when we adding it this way. So just leave this for older browsers
-    background-image: url("../img/svg/file-text2.svg");
+    background-image: url("~assets/svg/file-text2.svg");
 
     // for newer browsers
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/file-text2.svg");
+      -webkit-mask-image: url("~assets/svg/file-text2.svg");
       @include support-settings;
       background-color: $color-white;
-      mask-image: url("../img/svg/file-text2.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
+      mask-image: url("~assets/svg/file-text2.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
     }
   }
 

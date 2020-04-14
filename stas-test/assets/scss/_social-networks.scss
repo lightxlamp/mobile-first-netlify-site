@@ -21,50 +21,50 @@
   &__instagram {
     @include icon-box-settings;
     // We can't change color of icon when we adding it this way. So just leave this for older browsers
-    background-image: url("../img/svg/instagram.svg");
+    background-image: url("~assets/svg/instagram.svg");
 
     // for newer browsers
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/instagram.svg");
+      -webkit-mask-image: url("~assets/svg/instagram.svg");
       @include support-settings;
       background-color: $color-white;
-      mask-image: url("../img/svg/instagram.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
+      mask-image: url("~assets/svg/instagram.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
     }
   }
 
   &__twitter {
     @include icon-box-settings;
-    background-image: url("../img/svg/twitter.svg");
+    background-image: url("~assets/svg/twitter.svg");
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/twitter.svg");
+      -webkit-mask-image: url("~assets/svg/twitter.svg");
       @include support-settings;
       background-color: $color-white;
-      mask-image: url("../img/svg/twitter.svg");
+      mask-image: url("~assets/svg/twitter.svg");
     }
   }
 
   &__facebook {
     @include icon-box-settings;
-    background-image: url("../img/svg/facebook.svg");
+    background-image: url("~assets/svg/facebook.svg");
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/facebook.svg");
+      -webkit-mask-image: url("~assets/svg/facebook.svg");
       @include support-settings;
       background-color: $color-white;
-      mask-image: url("../img/svg/facebook.svg");
+      mask-image: url("~assets/svg/facebook.svg");
     }
   }
 
   &__web {
     @include icon-box-settings;
-    background-image: url("../img/svg/earth.svg");
+    background-image: url("~assets/svg/earth.svg");
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      -webkit-mask-image: url("../img/svg/earth.svg");
+      -webkit-mask-image: url("~assets/svg/earth.svg");
       @include support-settings;
       background-color: $color-white;
-      mask-image: url("../img/svg/earth.svg");
+      mask-image: url("~assets/svg/earth.svg");
     }
   }
 }
