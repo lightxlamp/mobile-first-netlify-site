@@ -456,18 +456,18 @@
   }
 
   // We can't change color of icon when we adding it this way. So just leave this for older browsers
-  background-image: url("~assets/img/svg/arrow-left.svg");
+  background-image: url("~assets/img/SVG/arrow-left.svg");
   background-size: cover;
   height: 2.6rem;
   margin-right: 3rem;
   width: 2.6rem;
 
   @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-    -webkit-mask-image: url("~assets/img/svg/arrow-left.svg");
+    -webkit-mask-image: url("~assets/img/SVG/arrow-left.svg");
     -webkit-mask-size: cover;
     background-color: $color-black;
     background-image: none;
-    mask-image: url("~assets/img/svg/arrow-left.svg");
+    mask-image: url("~assets/img/SVG/arrow-left.svg");
     mask-size: cover;
   }
 }
