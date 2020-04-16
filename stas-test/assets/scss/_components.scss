@@ -1,5 +1,5 @@
 .main-article {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/mountain.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("~assets/img/mountain.jpg");
   background-position: center; // lovely fix
   background-size: cover;
   color: #fff;
@@ -530,7 +530,7 @@
     padding: 15rem 11rem;
   }
 
-  background-image: url("../img/yellow_mountain.jpg");
+  background-image: url("~assets/img/yellow_mountain.jpg");
   background-position: center;
   background-size: cover;
 
@@ -642,7 +642,7 @@
   }
 
   &__col-1 {
-    background-image: url("../img/elephant.jpg");
+    background-image: url("~assets/img/elephant.jpg");
     background-position: center;
     background-size: cover;
     min-height: 18rem;
@@ -824,7 +824,7 @@ h2 {
 
 .main-story {
   // top, transparent black, faked with gradient - instead of filter: brightness
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../img/parrot.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(~assets/img/parrot.jpg);
   background-size: cover;
   background-position: center;
   padding: 14rem 2.4rem 4rem;
