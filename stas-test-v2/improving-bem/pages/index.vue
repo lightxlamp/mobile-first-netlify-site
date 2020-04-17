@@ -1,74 +1,63 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        improving-bem
-      </h1>
-      <h2 class="subtitle">
-        Mobile-first-test-site with better BEM
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+    <article class="card">
+      <img src="" alt="" class="card__backimage" />
+      <div class="card__header">
+        <figure class="card__figure">
+          <img src="../assets/img/green_lake.jpg" alt="" class="card__image" />
+        </figure>
       </div>
-
-      <article class="card">
-        <div class="card__header">
-          <figure class="card__figure">
-            <img
-              src="../assets/img/green_lake.jpg"
-              alt=""
-              class="card__image"
-            />
-          </figure>
-        </div>
-        <div class="card__body">
-          <h2 class="card__title">Dolore magna aliqua</h2>
-          <h3 class="card__subtitle">
-            Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has
-            appareat.
-          </h3>
-          <p class="card__copy"></p>
-          <div class="card__date">
-            <div class="date-time-author">
-              1h ago
-            </div>
+      <div class="card__body">
+        <h2 class="card__title">Dolore magna aliqua</h2>
+        <h3 class="card__subtitle">
+          Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has
+          appareat.
+        </h3>
+        <p class="card__copy"></p>
+        <div class="card__date">
+          <div class="date-time-author">
+            1h ago
           </div>
         </div>
+      </div>
+    </article>
 
-        <!-- <footer class="card__footer">
-          <div class="card__date">
-            <div class="date-time-author">
-              1h ago
-            </div>
+    <article class="card card--fullImage">
+      <img src="../assets/img/bridge.jpg" alt="" class="card__backimage" />
+      <div class="card__header">
+        <figure class="card__figure">
+          <img src="../assets/img/bridge.jpg" alt="" class="card__image" />
+        </figure>
+      </div>
+      <div class="card__body">
+        <h2 class="card__title">Large article title mobile layout</h2>
+        <h3 class="card__subtitle">
+          Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto,
+          vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu,
+          inermis eloquentiam.
+        </h3>
+        <p class="card__copy"></p>
+        <div class="card__date">
+          <div class="date-time-author">
+            1h ago
           </div>
-        </footer> -->
-      </article>
-    </div>
+        </div>
+      </div>
+    </article>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+// import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
-  }
+  components: {}
 }
 </script>
 
 <style lang="scss">
 .card {
+  margin-top: 40px;
   background-color: #fff;
   width: 327px;
   border-radius: 6px;
@@ -76,12 +65,14 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
 
   &__title {
     font-size: 16px;
     line-height: 20px;
     color: #202124;
     text-align: left;
+    font-weight: bold;
   }
 
   &__subtitle {
@@ -115,16 +106,56 @@ export default {
     height: 154px;
   }
 
-  // &__footer {
-  //   padding: 0px 24px 32px;
-  // }
+  &__date {
+    color: #a6adb4;
+  }
+}
+
+.card--fullImage {
+  background-color: yellow;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+
+  .card {
+    &__backimage {
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    &__title {
+      color: #fff;
+      font-size: 24px;
+      line-height: 34px;
+    }
+    &__subtitle {
+      color: #fff;
+    }
+
+    &__body {
+      position: absolute;
+      top: 10px;
+    }
+
+    &__date {
+      color: #cbd0d3;
+    }
+  }
 }
 
 .date-time-author {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   line-height: 26px;
-  color: #a6adb4;
+  //color: #a6adb4;
+  color: inherit;
   text-align: left;
   font-weight: normal;
   margin-top: 5px;
@@ -134,31 +165,10 @@ export default {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: bisque;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>
