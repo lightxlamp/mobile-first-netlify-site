@@ -22,8 +22,44 @@
       </div>
     </article>
 
+    {{ imgSourceset }}
+    <img :src="imgSourceset" width="100px" height="100px" />
+
+    <picture>
+      <source :srcset="imgSourceset" media="(min-width: 600px)" />
+      <img src="../assets/img/bridge_300.jpg" alt="MDN" />
+    </picture>
+
+    <picture>
+      <source :srcset="imgSourceset" media="(max-width: 400px)" />
+      <source :srcset="imgSourcesetSmall" />
+      <!-- <source srcset="../assets/img/bridge.jpg" media="(max-width: 400px)" />
+      <source srcset="../assets/img/bridge_300.jpg" /> -->
+      <!-- Define an <img> element for browsers that do not support the <picture> element. -->
+      <!-- <img
+          src="../assets/img/bridge.jpg"
+          alt="Flowers"
+          class="card__backimage"
+          style="width:auto;"
+        /> -->
+    </picture>
+
     <article class="card card--fullImage">
-      <img src="../assets/img/bridge.jpg" alt="" class="card__backimage" />
+      <!-- <img src="../assets/img/bridge_300.jpg" alt="" class="card__backimage" /> -->
+      <!-- <img src="../assets/img/bridge.jpg" alt="" class="card__backimage" /> -->
+
+      <picture>
+        <source :srcset="imgSourceset" media="(max-width: 400px)" />
+        <source :srcset="imgSourcesetSmall" />
+        <!-- Define an <img> element for browsers that do not support the <picture> element. -->
+        <!-- <img
+          src="../assets/img/bridge.jpg"
+          alt="Flowers"
+          class="card__backimage"
+          style="width:auto;"
+        /> -->
+      </picture>
+
       <div class="card__header">
         <figure class="card__figure">
           <img src="../assets/img/bridge.jpg" alt="" class="card__image" />
@@ -51,15 +87,38 @@
 // import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {}
+  components: {},
+  computed: {
+    // https://blog.lichter.io/posts/dynamic-images-vue-nuxt/
+    imgSourceset() {
+      // const baseName = this.selectedDog.toLowerCase()
+      return `${require(`@/assets/img/bridge.jpg`)}`
+    },
+    imgSourcesetSmall() {
+      return `${require(`@/assets/img/bridge_300.jpg`)}`
+    }
+  }
 }
 </script>
 
 <style lang="scss">
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: bisque;
+  border: 5px solid red;
+  width: 500px;
+  resize: horizontal;
+  overflow: auto;
+}
+
 .card {
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   background-color: #fff;
-  width: 327px;
+  width: 450px;
   border-radius: 6px;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
@@ -113,21 +172,21 @@ export default {
 
 .card--fullImage {
   background-color: yellow;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   position: relative;
-  box-sizing: border-box;
   height: 300px;
-  background-size: cover;
-  background-position: center;
 
   .card {
     &__backimage {
-      pointer-events: none;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: block;
+      // pointer-events: none;
+      // position: absolute;
+      // width: 100%;
+      // height: 100%;
+    }
+
+    &__image {
+      display: none;
     }
 
     &__title {
@@ -159,16 +218,5 @@ export default {
   text-align: left;
   font-weight: normal;
   margin-top: 5px;
-}
-
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: bisque;
 }
 </style>
