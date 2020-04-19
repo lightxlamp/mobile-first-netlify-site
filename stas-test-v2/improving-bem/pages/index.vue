@@ -22,42 +22,14 @@
       </div>
     </article>
 
-    {{ imgSourceset }}
-    <img :src="imgSourceset" width="100px" height="100px" />
-
-    <picture>
-      <source :srcset="imgSourceset" media="(min-width: 600px)" />
-      <img src="../assets/img/bridge_300.jpg" alt="MDN" />
-    </picture>
-
-    <picture>
-      <source :srcset="imgSourceset" media="(max-width: 400px)" />
-      <source :srcset="imgSourcesetSmall" />
-      <!-- <source srcset="../assets/img/bridge.jpg" media="(max-width: 400px)" />
-      <source srcset="../assets/img/bridge_300.jpg" /> -->
-      <!-- Define an <img> element for browsers that do not support the <picture> element. -->
-      <!-- <img
-          src="../assets/img/bridge.jpg"
-          alt="Flowers"
-          class="card__backimage"
-          style="width:auto;"
-        /> -->
-    </picture>
-
     <article class="card card--fullImage">
-      <!-- <img src="../assets/img/bridge_300.jpg" alt="" class="card__backimage" /> -->
       <!-- <img src="../assets/img/bridge.jpg" alt="" class="card__backimage" /> -->
 
       <picture>
-        <source :srcset="imgSourceset" media="(max-width: 400px)" />
-        <source :srcset="imgSourcesetSmall" />
+        <source :srcset="imgSourceset" media="(min-width: 768px)" />
         <!-- Define an <img> element for browsers that do not support the <picture> element. -->
-        <!-- <img
-          src="../assets/img/bridge.jpg"
-          alt="Flowers"
-          class="card__backimage"
-          style="width:auto;"
-        /> -->
+        <!-- Lie from W3? :p -->
+        <img :src="imgSourcesetSmall" />
       </picture>
 
       <div class="card__header">
@@ -118,7 +90,7 @@ export default {
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #fff;
-  width: 450px;
+  width: 327px;
   border-radius: 6px;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
