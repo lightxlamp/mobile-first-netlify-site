@@ -57,14 +57,11 @@
 </template>
 
 <script>
-// import Logo from '~/components/Logo.vue'
-
 export default {
   components: {},
   computed: {
     // https://blog.lichter.io/posts/dynamic-images-vue-nuxt/
     imgSourceset() {
-      // const baseName = this.selectedDog.toLowerCase()
       return `${require(`@/assets/img/bridge.jpg`)}`
     },
     imgSourcesetSmall() {
@@ -141,20 +138,10 @@ export default {
 }
 
 .card--fullImage {
-  // background-color: yellow;
-  // display: block;
-  // overflow: hidden;
   position: relative;
   height: 300px;
 
   .card {
-    &__backimage {
-      // pointer-events: none;
-      // position: absolute;
-      // width: 100%;
-      // height: 100%;
-    }
-
     &__image {
       display: none;
     }
