@@ -12,22 +12,7 @@
           <span class="navigation__icon">&nbsp;</span>
         </label>
 
-        <ul class="nav">
-          <li class="nav__item">
-            <nuxt-link class="nav__link nav__link--active" to="/"
-              >Home</nuxt-link
-            >
-          </li>
-          <li class="nav__item">
-            <nuxt-link class="nav__link" to="/discovery">Discovery</nuxt-link>
-          </li>
-          <li class="nav__item">
-            <nuxt-link class="nav__link" to="/world-news">Photos</nuxt-link>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Contact</a>
-          </li>
-        </ul>
+        <navigationLinks />
       </div>
 
       <div class="logo logo--header">Logo</div>
@@ -44,7 +29,12 @@
 </template>
 
 <script>
+import navigationLinks from '~/components/navigation'
+
 export default {
+  components: {
+    navigationLinks
+  },
   methods: {
     showSideBar() {
       if (this.$store.state.isSideBarVisible === false) {
@@ -64,7 +54,7 @@ export default {
   padding: 1.2rem 2rem;
   width: 100%;
 
-  &__logo {
+  .logo {
     color: $color-grey-dark-2;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;

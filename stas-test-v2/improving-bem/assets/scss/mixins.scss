@@ -1,0 +1,23 @@
+@mixin icon-box-settings {
+  background-size: cover;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+@mixin support-settings {
+  -webkit-mask-size: cover;
+  background-image: none;
+  mask-size: cover; // mask allow us to see background. (throught specified shape (mask-image))
+}
+
+@mixin common-link-settings-1 {
+  color: $color-grey-dark-1;
+  opacity: 1;
+  text-transform: none;
+}
+
+@mixin common-link-settings-2 {
+  background-color: rgba(#fff, 0.05);
+  opacity: 1;
+  transform: translateY(-3px);
+}

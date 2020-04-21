@@ -2,16 +2,18 @@
   <div>
     <myHeader />
     <nuxt />
+    <myFooter />
   </div>
 </template>
 
 <script>
+import myFooter from '~/components/myFooter'
 import myHeader from '~/components/myHeader'
-// import footerComponent from '~/components/Footer'
 // import sideBar from '~/components/SideBar'
 
 export default {
   components: {
+    myFooter,
     myHeader
   }
 }
