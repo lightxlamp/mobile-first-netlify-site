@@ -8,6 +8,7 @@
         </figure>
       </div>
       <div class="card__body">
+        <div class="card__category"></div>
         <h2 class="card__title">Dolore magna aliqua</h2>
         <h3 class="card__subtitle">
           Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has
@@ -23,8 +24,6 @@
     </article>
 
     <article class="card card--fullImage">
-      <!-- <img src="../assets/img/bridge.jpg" alt="" class="card__backimage" /> -->
-
       <picture>
         <source :srcset="imgSourceset" media="(min-width: 768px)" />
         <!-- Define an <img> element for browsers that do not support the <picture> element. -->
@@ -38,11 +37,13 @@
         </figure>
       </div>
       <div class="card__body">
+        <div class="card__category">
+          City
+        </div>
         <h2 class="card__title">Large article title mobile layout</h2>
         <h3 class="card__subtitle">
           Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto,
-          vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu,
-          inermis eloquentiam.
+          vidit vituperatoribus duo id. Affert detraxit
         </h3>
         <p class="card__copy"></p>
         <div class="card__date">
@@ -117,6 +118,7 @@ export default {
 
   &__figure {
     height: 100%;
+    height: 154px;
   }
 
   &__image {
@@ -125,15 +127,11 @@ export default {
   }
 
   &__header {
-    flex-basis: 0;
-    flex-grow: 1;
     height: 154px;
   }
 
   &__body {
     padding: 32px 24px;
-    flex-basis: 0;
-    flex-grow: 1;
     height: 154px;
   }
 
@@ -143,9 +141,9 @@ export default {
 }
 
 .card--fullImage {
-  background-color: yellow;
-  display: block;
-  overflow: hidden;
+  // background-color: yellow;
+  // display: block;
+  // overflow: hidden;
   position: relative;
   height: 300px;
 
@@ -161,18 +159,32 @@ export default {
       display: none;
     }
 
+    &__category {
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: 20px;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
     &__title {
       color: #fff;
       font-size: 24px;
       line-height: 34px;
     }
+
     &__subtitle {
       color: #fff;
+      font-size: 16px;
+      line-height: 26px;
     }
 
     &__body {
       position: absolute;
       top: 10px;
+      top: 0px;
+      height: 100%;
     }
 
     &__date {
