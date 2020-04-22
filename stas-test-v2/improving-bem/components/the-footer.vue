@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .footer {
   background-color: $color-grey-dark-2;
   display: none;

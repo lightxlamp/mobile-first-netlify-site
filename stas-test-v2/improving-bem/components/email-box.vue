@@ -26,6 +26,7 @@
 
   &__icon-box {
     @include icon-box-settings;
+    height: 2rem;
     // We can't change color of icon when we adding it this way. So just leave this for older browsers
     background-image: url('~assets/img/svg/location-arrow.svg');
     margin: 0.8rem 0 0 -2.5rem;

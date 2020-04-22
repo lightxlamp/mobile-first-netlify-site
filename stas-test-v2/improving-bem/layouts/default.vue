@@ -1,20 +1,22 @@
 <template>
   <div>
-    <appHeader />
+    <theSideBar />
+    <theHeader />
     <nuxt />
-    <appFooter />
+    <theFooter />
   </div>
 </template>
 
 <script>
-import appFooter from '~/components/app-footer'
-import appHeader from '~/components/app-header'
-// import sideBar from '~/components/SideBar'
+import theFooter from '~/components/the-footer'
+import theHeader from '~/components/the-header'
+import theSideBar from '~/components/the-side-bar'
 
 export default {
   components: {
-    appFooter,
-    appHeader
+    theFooter,
+    theHeader,
+    theSideBar
   }
 }
 </script>
@@ -25,7 +27,6 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
   box-sizing: border-box;
   font-family: $font-display;
   font-size: 62.5%; // 10px
@@ -56,9 +57,6 @@ html {
   }
   display: flex;
   flex-direction: column;
-}
-
-.container-world-news-page-bottom {
 }
 
 ::placeholder {

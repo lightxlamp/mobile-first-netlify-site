@@ -2,7 +2,7 @@
   <div>
     <header class="header">
       <div class="button-or-menu">
-        <input id="navi-toggle" type="checkbox" class="navigation__checkbox" />
+        <input id="navi-toggle" class="navigation__checkbox" type="checkbox" />
 
         <label
           for="navi-toggle"
@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .header {
   align-items: center;
   background-color: $color-secondary;

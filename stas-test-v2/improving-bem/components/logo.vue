@@ -1,5 +1,6 @@
 <template>
   <div v-if="location === 'header'" class="logo logo--header">Logo</div>
+  <div v-else-if="location === 'sidebar'" class="logo logo--sidebar">Logo</div>
   <div v-else class="logo logo--footer">Logo</div>
 </template>
 
@@ -34,7 +35,7 @@ export default {
     color: $color-white;
   }
 
-  &--red {
+  &--sidebar {
     color: $color-primary;
   }
 }
