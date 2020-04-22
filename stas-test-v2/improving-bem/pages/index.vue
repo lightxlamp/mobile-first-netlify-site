@@ -77,9 +77,12 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: $color-secondary;
   background-color: bisque;
   border: 5px solid red;
   width: 500px;
+  max-width: 182rem;
+  min-height: 100vh;
   resize: horizontal;
   overflow: auto;
 }

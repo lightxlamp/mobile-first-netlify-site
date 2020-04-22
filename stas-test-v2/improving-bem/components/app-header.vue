@@ -12,27 +12,25 @@
           <span class="navigation__icon">&nbsp;</span>
         </label>
 
-        <navigationLinks />
+        <navigationLinks location="header" />
       </div>
 
-      <div class="logo logo--header">Logo</div>
+      <logo location="header" />
 
-      <div class="logged-in-user">
-        <img
-          src="../assets/img/blonde_girl.jpg"
-          alt="User photo"
-          class="logged-in-user__photo"
-        />
-      </div>
+      <loggedInUser />
     </header>
   </div>
 </template>
 
 <script>
-import navigationLinks from '~/components/navigation'
+import loggedInUser from '~/components/logged-in-user'
+import logo from '~/components/logo'
+import navigationLinks from '~/components/navigation-links'
 
 export default {
   components: {
+    loggedInUser,
+    logo,
     navigationLinks
   },
   methods: {
@@ -53,21 +51,6 @@ export default {
   justify-content: space-between;
   padding: 1.2rem 2rem;
   width: 100%;
-
-  .logo {
-    color: $color-grey-dark-2;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3rem;
-    font-weight: bold;
-    line-height: 2rem;
-    text-transform: uppercase;
-
-    @media only screen and (min-width: $bp-tablet) {
-      & {
-        color: $color-primary;
-      }
-    }
-  }
 
   @media only screen and (min-width: $bp-tablet) {
     & > :nth-child(1) {
@@ -122,18 +105,6 @@ export default {
 
   &::after {
     transform: translateY(-0.9rem);
-  }
-}
-
-.logged-in-user {
-  &__photo {
-    border-radius: 50%;
-    height: auto;
-    max-width: 100%;
-    width: 1.6rem;
-    @media only screen and (min-width: $bp-tablet) {
-      width: 30px;
-    }
   }
 }
 
