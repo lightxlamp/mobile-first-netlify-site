@@ -1,30 +1,10 @@
 <template>
   <div class="container">
-    <article class="card">
-      <img src="" alt="" class="card__backimage" />
-      <div class="card__header">
-        <figure class="card__figure">
-          <img src="../assets/img/green_lake.jpg" alt="" class="card__image" />
-        </figure>
-      </div>
-      <div class="card__body">
-        <div class="card__category"></div>
-        <h2 class="card__title">Dolore magna aliqua</h2>
-        <h3 class="card__subtitle">
-          Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has
-          appareat.
-        </h3>
-        <p class="card__copy"></p>
-        <div class="card__date">
-          <div class="date-time-author">
-            1h ago
-          </div>
-        </div>
-      </div>
-    </article>
+    <appArticle />
+    <appArticle type="fullImage" />
 
     <article class="card card--fullImage">
-      <picture>
+      <picture class="card__backgroundImage">
         <source :srcset="imgSourceset" media="(min-width: 768px)" />
         <!-- Define an <img> element for browsers that do not support the <picture> element. -->
         <!-- Lie from W3? :p -->
@@ -53,12 +33,49 @@
         </div>
       </div>
     </article>
+
+    <article class="card card--withoutText">
+      <picture class="card__backgroundImage">
+        <!-- <source srcset="" media="(min-width: 768px)" /> -->
+        <img src="" />
+      </picture>
+
+      <div class="card__header">
+        <figure class="card__figure">
+          <img src="../assets/img/elephant.jpg" alt="" class="card__image" />
+        </figure>
+      </div>
+      <div class="card__body">
+        <div class="card__category">
+          City
+        </div>
+        <h2 class="card__title">Small title</h2>
+        <h3 class="card__subtitle">
+          Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto,
+          vidit vituperatoribus duo id. Affert detraxit
+        </h3>
+        <p class="card__copy"></p>
+        <div class="card__date">
+          <div class="date-time-author">
+            <div class="date-time-author__icon"></div>
+            <div class="date-time-author__time">
+              1g ago &nbsp;
+            </div>
+            <span class="date-time-author__author">by Worldwide</span>
+          </div>
+        </div>
+      </div>
+    </article>
   </div>
 </template>
 
 <script>
+import appArticle from '~/components/app-article'
+
 export default {
-  components: {},
+  components: {
+    appArticle
+  },
   computed: {
     // https://blog.lichter.io/posts/dynamic-images-vue-nuxt/
     imgSourceset() {
@@ -78,7 +95,6 @@ export default {
   flex-direction: column;
   align-items: center;
   background-color: $color-secondary;
-  background-color: bisque;
   border: 5px solid red;
   width: 500px;
   max-width: 182rem;
@@ -140,6 +156,47 @@ export default {
   }
 }
 
+.card--withoutText {
+  box-shadow: none;
+  .card {
+    &__backgroundImage {
+      display: none;
+    }
+
+    &__category {
+      display: none;
+    }
+
+    &__subtitle {
+      display: none;
+    }
+
+    &__copy {
+      display: none;
+    }
+
+    &__figure {
+      height: 100%;
+      border-radius: $border-radius;
+      overflow: hidden;
+    }
+
+    &__header {
+      height: 180px;
+    }
+
+    &__title {
+      line-height: normal;
+    }
+
+    &__body {
+      height: 62px;
+      padding: 20px 0;
+      background-color: $color-secondary;
+    }
+  }
+}
+
 .card--fullImage {
   position: relative;
   height: 300px;
@@ -186,7 +243,7 @@ export default {
 .date-time-author {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
-  line-height: 26px;
+  line-height: 24px;
   //color: #a6adb4;
   color: inherit;
   text-align: left;
