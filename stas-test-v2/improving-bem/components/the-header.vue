@@ -2,7 +2,9 @@
   <div>
     <header class="header">
       <div class="button-or-menu">
-        <input id="navi-toggle" class="navigation__checkbox" type="checkbox" />
+        <input id="navi-toggle"  
+          class="navigation__checkbox" 
+          type="checkbox" />
 
         <label
           for="navi-toggle"

@@ -20,14 +20,10 @@
         <nuxt-link class="nav__link nav__link--footer" to="/">Home</nuxt-link>
       </li>
       <li class="nav__item">
-        <nuxt-link class="nav__link nav__link--footer" to="/discovery"
-          >Discovery</nuxt-link
-        >
+        <nuxt-link class="nav__link nav__link--footer" to="/discovery">Discovery</nuxt-link>
       </li>
       <li class="nav__item">
-        <nuxt-link class="nav__link nav__link--footer" to="/world-news"
-          >Photos</nuxt-link
-        >
+        <nuxt-link class="nav__link nav__link--footer" to="/world-news">Photos</nuxt-link>
       </li>
       <li class="nav__item">
         <a href="#" class="nav__link nav__link--footer">Contact</a>

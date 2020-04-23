@@ -4,24 +4,31 @@
     <header class="header">
       <div class="button-or-menu">
         <!-- <button class="nav-btn"></button> -->
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+        <input type="checkbox" class="navigation__checkbox"
+         id="navi-toggle" />
 
-        <label for="navi-toggle" class="navigation__button" v-on:click="showSideBar">
+        <label for="navi-toggle" 
+          class="navigation__button" v-on:click="showSideBar">
           <span class="navigation__icon">&nbsp;</span>
         </label>
 
         <ul class="nav">
           <li class="nav__item">
-            <nuxt-link class="nav__link nav__link--active" to="/">Home</nuxt-link>
+            <nuxt-link class="nav__link nav__link--active"
+              to="/">Home</nuxt-link>
           </li>
           <li class="nav__item">
-            <nuxt-link class="nav__link" to="/discovery">Discovery</nuxt-link>
+            <nuxt-link class="nav__link" 
+              to="/discovery">Discovery</nuxt-link>
           </li>
           <li class="nav__item">
-            <nuxt-link class="nav__link" to="/world-news">Photos</nuxt-link>
+            <nuxt-link class="nav__link" 
+              to="/world-news">Photos</nuxt-link>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Contact</a>
+            <a 
+              href="#" 
+              class="nav__link">Contact</a>
           </li>
         </ul>
       </div>
@@ -29,7 +36,9 @@
       <div class="logo logo--header">Logo</div>
 
       <div class="logged-in-user">
-        <img src="../assets/img/blonde_girl.jpg" alt="User photo" class="logged-in-user__photo" />
+        <img src="../assets/img/blonde_girl.jpg" 
+          alt="User photo" 
+          class="logged-in-user__photo" />
       </div>
     </header>
   </div>

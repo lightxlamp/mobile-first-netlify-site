@@ -15,7 +15,7 @@
       </h3>
       <p class="card__copy"></p>
       <div class="card__date">
-        <div class="date-time-author">1h ago {{ prefix }}</div>
+        <div class="date-time-author">1h ago</div>
       </div>
     </div>
   </article>
