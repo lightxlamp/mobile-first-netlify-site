@@ -2,15 +2,9 @@
   <div>
     <header class="header">
       <div class="button-or-menu">
-        <input id="navi-toggle"  
-          class="navigation__checkbox" 
-          type="checkbox" />
+        <input id="navi-toggle" class="navigation__checkbox" type="checkbox" />
 
-        <label
-          for="navi-toggle"
-          class="navigation__button"
-          @click="showSideBar"
-        >
+        <label for="navi-toggle" class="navigation__button" @click="showSideBar">
           <span class="navigation__icon">&nbsp;</span>
         </label>
 

@@ -1,10 +1,6 @@
 <template>
   <div class="logged-in-user">
-    <img
-      src="../assets/img/blonde_girl.jpg"
-      alt="User photo"
-      class="logged-in-user__photo"
-    />
+    <img src="../assets/img/blonde_girl.jpg" alt="User photo" class="logged-in-user__photo" />
   </div>
 </template>
 

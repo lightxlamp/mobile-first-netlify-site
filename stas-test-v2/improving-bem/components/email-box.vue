@@ -4,9 +4,7 @@
       <input class="email-field" type="email" placeholder="Email" />
       <div class="user-email-box__icon-box"></div>
     </div>
-    <p class="user-email-box__text">
-      Stay in touch with us for the freshest products!
-    </p>
+    <p class="user-email-box__text">Stay in touch with us for the freshest products!</p>
   </div>
 </template>
 
