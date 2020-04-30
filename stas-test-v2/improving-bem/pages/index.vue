@@ -1,253 +1,250 @@
 <template>
   <div class="container">
-    <appArticle />
-    <appArticle type="fullImage" />
+    <section class="main-article-and-news">
+      <mainArticle />
 
-    <article class="card card--fullImage">
-      <picture class="card__backgroundImage">
-        <source :srcset="imgSourceset" media="(min-width: 768px)" />
-        <!-- Define an <img> element for browsers that do not support the <picture> element. -->
-        <!-- Lie from W3? :p -->
-        <img :src="imgSourcesetSmall" />
-      </picture>
+      <div class="news">
+        <div class="news__wrapper">
+          <sectionHeader title="More news"/> 
 
-      <div class="card__header">
-        <figure class="card__figure">
-          <img src="../assets/img/bridge.jpg" alt="" class="card__image" />
-        </figure>
-      </div>
-      <div class="card__body">
-        <div class="card__category">
-          City
-        </div>
-        <h2 class="card__title">Large article title mobile layout</h2>
-        <h3 class="card__subtitle">
-          Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto,
-          vidit vituperatoribus duo id. Affert detraxit
-        </h3>
-        <p class="card__copy"></p>
-        <div class="card__date">
-          <div class="date-time-author">
-            1h ago
-          </div>
+          <appArticlesList
+            :articles="more_news_articles"
+            articlesType="textOnly"
+            containerClass="news__content"
+          />
         </div>
       </div>
-    </article>
+    </section>
 
-    <article class="card card--withoutText">
-      <picture class="card__backgroundImage">
-        <!-- <source srcset="" media="(min-width: 768px)" /> -->
-        <img src="" />
-      </picture>
+    <section class="trending">
+      <sectionHeader title="Trending"/> 
+      <appArticlesList 
+          :articles="trending_articles" 
+          articlesType="primary"
+          :withImages="true"
+          containerClass="trending__content" 
+      />
+    </section>
 
-      <div class="card__header">
-        <figure class="card__figure">
-          <img src="../assets/img/elephant.jpg" alt="" class="card__image" />
-        </figure>
+    <section class="happening-now">
+      <sectionHeader title="Happening Now"/> 
+      <div class="happening-now__content-wrapper">
+        <appArticlesList 
+          :articles="happening_now_articles_column_1" 
+          :withImages="true"
+          articlesType="fullImage"
+          containerClass="happening-now__column-1" 
+        />
+
+        <appArticlesList 
+          :articles="happening_now_articles_column_2" 
+          :withImages="true"
+          articlesType="withoutText"
+          containerClass="happening-now__column-2" 
+        />
       </div>
-      <div class="card__body">
-        <div class="card__category">
-          City
-        </div>
-        <h2 class="card__title">Small title</h2>
-        <h3 class="card__subtitle">
-          Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto,
-          vidit vituperatoribus duo id. Affert detraxit
-        </h3>
-        <p class="card__copy"></p>
-        <div class="card__date">
-          <div class="date-time-author">
-            <div class="date-time-author__icon"></div>
-            <div class="date-time-author__time">
-              1g ago &nbsp;
-            </div>
-            <span class="date-time-author__author">by Worldwide</span>
-          </div>
-        </div>
-      </div>
-    </article>
+    </section>
   </div>
 </template>
 
 <script>
-import appArticle from '~/components/app-article'
+import appArticlesList from '~/components/app-articles-list'
+import dateTimeAuthor from '~/components/date-time-author'
+import mainArticle from "~/components/main-article"
+import sectionHeader from "~/components/section-header"
 
 export default {
   components: {
-    appArticle
+    appArticlesList,
+    dateTimeAuthor ,
+    mainArticle,
+    sectionHeader
   },
   computed: {
-    // https://blog.lichter.io/posts/dynamic-images-vue-nuxt/
     imgSourceset() {
       return `${require(`@/assets/img/bridge.jpg`)}`
     },
     imgSourcesetSmall() {
       return `${require(`@/assets/img/bridge_300.jpg`)}`
+    },
+    happening_now_articles_column_1() {
+      return this.$store.state.happening_now_articles_column_1;
+    },
+    happening_now_articles_column_2() {
+      return this.$store.state.happening_now_articles_column_2;
+    },
+    more_news_articles() {
+      return this.$store.state.more_news_articles;
+    },
+    trending_articles() {
+      return this.$store.state.trending_articles;
     }
   }
 }
 </script>
 
 <style lang="scss">
+@import '../assets/scss/mixins.scss';
+
 .container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $color-secondary;
-  border: 5px solid red;
-  width: 500px;
   max-width: 182rem;
+  min-width: 34rem;
   min-height: 100vh;
-  resize: horizontal;
   overflow: auto;
+  padding-bottom: 8rem;
 }
 
-.card {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: #fff;
-  width: 327px;
-  border-radius: 6px;
-  overflow: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+.trending {
+  &__content {
+    & > article:last-child {
+      display: none; // To hide the third card on a lower resolutions
 
-  &__title {
-    font-size: 16px;
-    line-height: 20px;
-    color: #202124;
-    text-align: left;
-    font-weight: bold;
-  }
-
-  &__subtitle {
-    font-size: 13px;
-    line-height: 23px;
-    color: #a6adb4;
-    text-align: left;
-    font-weight: normal;
-    margin-top: 5px;
-  }
-
-  &__figure {
-    height: 100%;
-    height: 154px;
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-  }
-
-  &__header {
-    height: 154px;
-  }
-
-  &__body {
-    padding: 32px 24px;
-    height: 154px;
-  }
-
-  &__date {
-    color: #a6adb4;
-  }
-}
-
-.card--withoutText {
-  box-shadow: none;
-  .card {
-    &__backgroundImage {
-      display: none;
+      @media only screen and (min-width: $bp-desktop) {
+        display: inline-flex;
+      }
     }
 
-    &__category {
-      display: none;
-    }
+    @media only screen and (min-width: $bp-tablet) {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
 
-    &__subtitle {
-      display: none;
-    }
-
-    &__copy {
-      display: none;
-    }
-
-    &__figure {
-      height: 100%;
-      border-radius: $border-radius;
-      overflow: hidden;
-    }
-
-    &__header {
-      height: 180px;
-    }
-
-    &__title {
-      line-height: normal;
-    }
-
-    &__body {
-      height: 62px;
-      padding: 20px 0;
-      background-color: $color-secondary;
+      & > article:not(:first-child)  {
+        margin-left: 4rem;
+      }
     }
   }
 }
 
-.card--fullImage {
-  position: relative;
-  height: 300px;
+.happening-now {
+  //@include section-padding;
 
-  .card {
-    &__image {
-      display: none;
+  @media only screen and (min-width: $bp-tablet) {
+    width: 60.8rem;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    width: 116rem;
+    flex-direction: column;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+    }
+  }
+
+  &__column-2 {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+
+      & > article:not(:first-child) {
+        margin-left: 4rem;
+      }
     }
 
-    &__category {
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: bold;
-      line-height: 20px;
-      font-size: 16px;
-      margin-bottom: 30px;
+    @media only screen and (min-width: $bp-desktop) {
+      flex-direction: column;
+
+      & > article {
+        margin-left: 4rem;
+      }
     }
 
-    &__title {
-      color: #fff;
-      font-size: 24px;
-      line-height: 34px;
-    }
+    & > article:last-child {
+      display: none; // To hide a third card on a lower resolutions
 
-    &__subtitle {
-      color: #fff;
-      font-size: 16px;
-      line-height: 26px;
+      @media only screen and (min-width: $bp-desktop) {
+        display: block;
+      }
     }
+  }
 
-    &__body {
-      position: absolute;
-      top: 10px;
-      top: 0px;
-      height: 100%;
-    }
-
-    &__date {
-      color: #cbd0d3;
+  &__column-1 {
+    @media only screen and (min-width: $bp-desktop) {
+      // flex-basis: 0;
+      // flex-grow: 2;
     }
   }
 }
 
-.date-time-author {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-  //color: #a6adb4;
-  color: inherit;
-  text-align: left;
-  font-weight: normal;
-  margin-top: 5px;
+.main-article-and-news {
+  @media only screen and (min-width: $bp-desktop) {
+    display: flex;
+  }
+}
+
+.news {
+  background-color: $color-white;
+  padding: 0 2rem;
+
+  @media only screen and (min-width: $bp-tablet) {
+    padding: 0 8rem;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    flex-basis: 0;
+    flex-grow: 4;
+    padding: 6rem 6rem 10rem 10rem;
+  }
+
+  &__wrapper {
+    width: 32.7rem;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $bp-tablet) {
+      width: 60.8rem;
+    }
+
+    @media only screen and (min-width: $bp-desktop) {
+      width: auto;
+    }
+  }
+
+  &__content {
+    border-top: 2px solid #EBEDED;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > article:first-child {
+      @media only screen and (min-width: $bp-tablet) {
+        margin-right: 6rem;
+      }
+    }
+    @media only screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      //justify-content: space-between;
+      justify-content: center;
+      align-items: end;
+    }
+    @media only screen and (min-width: $bp-desktop) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__content > div {
+    // to set equal width to both news-blocks
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  &__content > div:not(:first-child) {
+    margin-left: 4rem;
+  }
 }
 </style>

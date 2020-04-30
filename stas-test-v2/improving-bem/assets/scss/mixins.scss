@@ -10,6 +10,29 @@
   mask-size: cover; // mask allow us to see background. (throught specified shape (mask-image))
 }
 
+@mixin textBgInital {
+  transition: all .8s;
+  background: linear-gradient(to right, $color-white, $color-white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  display: inline-flex;
+  color: transparent;
+}
+
+@mixin textBgHovered {
+  // background: linear-gradient(to right, $color-primary, #28b485); 
+  // Color matching is bad, but look!!! It looks
+  // like a parrot on a background picture ♥♥♥
+  background: linear-gradient(to right, #c52e25, #c8d5a7); // taken from parrot pic
+  background-clip: text;
+  -webkit-background-clip: text;
+  display: inline-flex;
+  color: transparent;
+  -webkit-text-stroke: .3px $color-black;
+  transform: scaleX(1.05) scaleY(1.1);
+  text-shadow: .5rem 1rem 2rem rgba($color: $color-black, $alpha: .2);
+}
+
 @mixin common-link-settings-1 {
   color: $color-grey-dark-1;
   opacity: 1;
@@ -20,4 +43,20 @@
   background-color: rgba(#fff, 0.05);
   opacity: 1;
   transform: translateY(-3px);
+}
+
+@mixin section-padding {
+  padding: 0 2rem;
+
+  @media only screen and (min-width: $bp-tablet) {
+    padding: 0 8rem;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    padding: 0 14rem;
+  }
+
+  @media only screen and (min-width: $bp-large-desktop) {
+    padding: 0 32rem;
+  }
 }

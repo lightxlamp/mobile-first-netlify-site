@@ -1,7 +1,7 @@
 <template>
-  <div v-if="location === 'header'" class="logo logo--header">Logo</div>
-  <div v-else-if="location === 'sidebar'" class="logo logo--sidebar">Logo</div>
-  <div v-else class="logo logo--footer">Logo</div>
+  <div v-if="location === 'header'" class="app-logo app-logo--header">Logo</div>
+  <div v-else-if="location === 'sidebar'" class="app-logo app-logo--sidebar">Logo</div>
+  <div v-else class="app-logo app-logo--footer">Logo</div>
 </template>
 
 <script>
@@ -16,12 +16,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.logo {
+.app-logo {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
   line-height: 2rem;
   text-transform: uppercase;
+  cursor: pointer;
 
   &--header {
     color: $color-grey-dark-2;

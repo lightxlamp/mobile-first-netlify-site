@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './assets/scss/mixins.scss';
+@import '../assets/scss/mixins.scss';
 
 .allLinks {
   display: flex;
@@ -90,12 +90,6 @@ export default {
   @media only screen and (min-width: $bp-tablet) {
     display: flex;
     padding-right: 2rem;
-
-    &--footer {
-      align-items: flex-start;
-      display: flex;
-      flex-direction: column;
-    }
   }
 
   &__link:link,
@@ -136,6 +130,14 @@ export default {
   &__link {
     &--active {
       opacity: 1;
+    }
+  }
+
+  &--footer {
+    @media only screen and (min-width: $bp-tablet) {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
     }
   }
 }
