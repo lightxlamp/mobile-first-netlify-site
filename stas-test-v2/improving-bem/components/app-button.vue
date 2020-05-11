@@ -29,7 +29,8 @@ export default {
   font-family: $font-display;
   font-size: 1.1rem;
   font-weight: bold;
-  padding: 1.2rem 2.5rem;
+  line-height: 1rem;
+  padding: 1.5rem 3rem;
   text-transform: uppercase;
   transition: all 0.2s;
   position: relative;

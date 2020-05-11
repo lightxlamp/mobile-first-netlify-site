@@ -1,6 +1,5 @@
 <template>
     <section class="search-news">
-
         <div class="search-news-main">
           <div class="search-news-main__title">World news</div>
           <div class="search-news-main__line"></div>
@@ -123,7 +122,9 @@ export default {
   @media only screen and (min-width: $bp-desktop) {
     flex-basis: 0;
     flex-grow: 1;
-    padding: 12rem 11rem 14rem;
+    padding: 12rem 11rem 0rem;
+    display: flex;
+    flex-direction: column;
   }
 
   &__btn {
