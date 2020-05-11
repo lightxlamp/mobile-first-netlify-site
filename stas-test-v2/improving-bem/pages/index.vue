@@ -48,18 +48,8 @@
 </template>
 
 <script>
-import appArticlesList from '~/components/app-articles-list'
-import dateTimeAuthor from '~/components/date-time-author'
-import mainArticle from "~/components/main-article"
-import sectionHeader from "~/components/section-header"
-
 export default {
-  components: {
-    appArticlesList,
-    dateTimeAuthor ,
-    mainArticle,
-    sectionHeader
-  },
+  
   computed: {
     imgSourceset() {
       return `${require(`@/assets/img/bridge.jpg`)}`
@@ -218,7 +208,6 @@ export default {
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     & > article:first-child {
       @media only screen and (min-width: $bp-tablet) {
@@ -227,9 +216,7 @@ export default {
     }
     @media only screen and (min-width: $bp-tablet) {
       flex-direction: row;
-      //justify-content: space-between;
       justify-content: center;
-      align-items: end;
     }
     @media only screen and (min-width: $bp-desktop) {
       flex-direction: column;

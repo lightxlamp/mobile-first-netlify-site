@@ -113,6 +113,7 @@ export default {
   &__overlay {
     display: none;
     background: rgba(0,0,0,0.7);
+    border-radius: $border-radius;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -291,8 +292,8 @@ export default {
 
     &__header {
       cursor: pointer;
-      perspective: 1000;
-      -webkit-perspective: 1000;
+      perspective: 100rem;
+      -webkit-perspective: 100rem;
       padding: 2rem 0;
 
       &--flipper {
@@ -318,8 +319,6 @@ export default {
         left: 0;
         width: 100%;
         height: 100%; 
-        -webkit-perspective: 1000;
-        perspective: 1000;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
       }
@@ -360,12 +359,6 @@ export default {
   height: 30rem;
   position: relative;
 
-  &:hover {
-    .card__body {
-      opacity: 0;
-    }
-  }
-
   @media only screen and (min-width: $bp-tablet) {
     height: 43rem;
     width: 60.8rem;
@@ -383,6 +376,18 @@ export default {
 
     &__backgroundImage {
       display: inline-block;
+      position:absolute;
+      top:50%;
+      left:50%;
+
+      /* shifts image so that center of image is in center of container */
+      transform:translateX(-50%) translateY(-50%);
+
+      /* ensures image fully covers the parent element */
+      width:auto;
+      height:auto;
+      min-width:100%;
+      min-height:100%;
     }
 
     &__category {
@@ -433,6 +438,12 @@ export default {
     &__date {
       color: #cbd0d3;
     }
+  }
+}
+
+.card--fullImage:hover {
+  .card__body {
+    opacity: 0;
   }
 }
 

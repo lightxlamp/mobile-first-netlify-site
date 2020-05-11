@@ -64,25 +64,9 @@
 </template>
 
 <script>
-import appAuthor from '~/components/app-author'
-import appPagination from '~/components/app-pagination'
-import appBreadcrumbs from '~/components/app-breadcrumbs'
-import dateTimeAuthor from '~/components/date-time-author'
-import mainArticle from "~/components/main-article"
-import sectionHeader from "~/components/section-header"
-import searchNewsH from "~/components/search-news-h"
 
 export default {
-  components: {
-    appAuthor,
-    appBreadcrumbs,
-    appPagination,
-    dateTimeAuthor,
-    mainArticle,
-    searchNewsH,
-    sectionHeader
-  },
-
+  
   computed: {
     happening_now_articles_column_1() {
       return this.$store.state.happening_now_articles_column_1;

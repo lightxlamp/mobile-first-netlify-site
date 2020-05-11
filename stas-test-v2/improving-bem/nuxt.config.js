@@ -30,7 +30,8 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: "@/plugins/vClickOutside", ssr: false }
+    { src: "@/plugins/vClickOutside", ssr: false },
+    '~plugins/core-components.js'
   ],
   /*
    ** Nuxt.js dev-modules

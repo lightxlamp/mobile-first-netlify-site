@@ -108,7 +108,11 @@
 }
 
 .next-story:hover {
-  backdrop-filter: blur(10px);
+  background-color: rgba($color-black, $alpha: .4);
+  @supports (-webkit-backdrop-filter: url()) or (backdrop-filter: url()) {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+  }
 }
   
 </style>

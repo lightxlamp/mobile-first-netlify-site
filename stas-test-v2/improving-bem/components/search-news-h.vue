@@ -1,35 +1,40 @@
 <template>
-  <section class="search-news">
-    <div class="search-news-main">
-      <div class="search-news-main__title">World news</div>
-      <div class="search-news-main__line"></div>
-      <div class="search-news-main__text">
-        Stay informed without overdosing on the news vix id nullam detracto
-        vidit.
-      </div>
+    <section class="search-news">
 
-      <appAuthor
-        avatarFile="boy.jpg"
-        authorName="Jonathan Walker"
-        modifier="bordered"
-        hideName="true"
-      />
-    </div>
+        <div class="search-news-main">
+          <div class="search-news-main__title">World news</div>
+          <div class="search-news-main__line"></div>
+          <div class="search-news-main__text">
+            Stay informed without overdosing on the news vix id nullam detracto
+            vidit.
+          </div>
 
-    <div class="search-news-fields">
-      <div class="input-box">
-        <div class="input-box__title">Select a date</div>
-        <input class="input-box__field" type="text" placeholder="Select..." />
-        <div class="input-box__icon input-box__icon--down"></div>
-      </div>
+           <appAuthor 
+            avatarFile="boy.jpg"
+            authorName="Jonathan Walker"
+            modifier="bordered"
+            hideName="true"
+          />
+        </div>
 
-      <div class="input-box">
-        <div class="input-box__title">Enter the first keywords</div>
-        <input class="input-box__field" />
-      </div>
-      <appButton btnText="Search" startPosition="down" />
-    </div>
-  </section>
+        <div class="search-news-fields">
+          <div class="input-box">
+            <div class="input-box__title">Select a date</div>
+            <input
+              class="input-box__field"
+              type="text"
+              placeholder="Select..."
+            />
+            <div class="input-box__icon input-box__icon--down"></div>
+          </div>
+
+          <div class="input-box">
+            <div class="input-box__title">Enter the first keywords</div>
+            <input class="input-box__field" />
+          </div>
+          <appButton btnText="Search" startPosition="down" />
+        </div>
+    </section>
 </template>
 
 <script>
@@ -71,7 +76,7 @@ export default {
     padding: 15rem 11rem;
   }
 
-  background-image: url('../assets/img/yellow_mountain.jpg');
+  background-image: url("../assets/img/yellow_mountain.jpg");
   background-position: center;
   background-size: cover;
 
@@ -161,14 +166,14 @@ export default {
     z-index: 10;
 
     &--down {
-      background-image: url('../assets/img/svg/chevron-thin-down.svg');
+      background-image: url("../assets/img/svg/chevron-thin-down.svg");
 
       @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-        -webkit-mask-image: url('../assets/img/svg/chevron-thin-down.svg');
+        -webkit-mask-image: url("../assets/img/svg/chevron-thin-down.svg");
         -webkit-mask-size: cover;
         background-color: $color-grey-dark-2;
         background-image: none;
-        mask-image: url('../assets/img/svg/chevron-thin-down.svg');
+        mask-image: url("../assets/img/svg/chevron-thin-down.svg");
         mask-size: cover;
       }
     }

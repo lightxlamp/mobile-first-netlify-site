@@ -15,7 +15,7 @@
   background: linear-gradient(to right, $color-white, $color-white);
   background-clip: text;
   -webkit-background-clip: text;
-  display: inline-flex;
+  display: inline-block;
   color: transparent;
 }
 
@@ -26,8 +26,8 @@
   background: linear-gradient(to right, #c52e25, #c8d5a7); // taken from parrot pic
   background-clip: text;
   -webkit-background-clip: text;
-  display: inline-flex;
   color: transparent;
+  display: inline-block;
   -webkit-text-stroke: .3px $color-black;
   transform: scaleX(1.05) scaleY(1.1);
   text-shadow: .5rem 1rem 2rem rgba($color: $color-black, $alpha: .2);
