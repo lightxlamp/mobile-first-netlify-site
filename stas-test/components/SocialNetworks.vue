@@ -6,10 +6,10 @@
     <div class="social-networks__facebook"></div>
     <div class="social-networks__web"></div>
   </div>
-  <!-- <ul class="social-networks"> 
-        <li class="social-networks__instagram"></li>
-        <li class="social-networks__twitter"></li>
-        <li class="social-networks__facebook"></li>
-        <li class="social-networks__web"></li>
-    </ul> -->
+  <!--<ul class="social-networks"> 
+    <li class="social-networks__instagram"></li>
+    <li class="social-networks__twitter"></li>
+    <li class="social-networks__facebook"></li>
+    <li class="social-networks__web"></li>
+  </ul>-->
 </template>
