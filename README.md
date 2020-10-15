@@ -17,7 +17,7 @@ Designs are available [here](https://xd.adobe.com/view/e567f212-528c-46ac-5e38-2
 ### Result
 Stas: 3 pages are avaliable now: 
 - https://vigorous-galileo-bbd0bd.netlify.app/
-- https://vigorous-galileo-bbd0bd.netlify.app/discovery
+- https://vigorous-galileo-bbd0bd.netlify.app/discovery/
 - https://vigorous-galileo-bbd0bd.netlify.app/world-news/
 
 ### TODO
