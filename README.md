@@ -13,3 +13,12 @@ Designs are available [here](https://xd.adobe.com/view/e567f212-528c-46ac-5e38-2
 - Must work on Safari, Chrome and Firefox
 - Be creative, add additional features to your taste (animations, content, etc.)
 - Deploy to [Netlify](https://www.netlify.com/)
+
+### Result
+Stas: 3 pages are avaliable now: 
+- https://youthful-jang-e950e3.netlify.app/
+- https://youthful-jang-e950e3.netlify.app/discovery
+- https://youthful-jang-e950e3.netlify.app/world-news
+
+### TODO
+Stas: Upload / fix animations on hosting
